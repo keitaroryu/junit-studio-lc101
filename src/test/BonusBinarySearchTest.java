@@ -39,12 +39,33 @@ public class BonusBinarySearchTest {
     }
 
     @Test
-    public void findValueMiddleOddSizedArrayEvenSizedArray() {
+    public void findValueMiddleOddSizedArray() {
         assertEquals(5, binarySearch(testArray2, 33), .001);
     }
 
     @Test
+    public void findLastValueOddSizedArray() {
+        assertEquals(10, binarySearch(testArray2, 1), .001);
+    }
+
+    @Test
+    public void findLastValueEvenSizedArray() {
+        assertEquals(9, binarySearch(testArray, 1), .001);
+    }
+
+    @Test
+    public void findFirstOddSizedArray() {
+        assertEquals(0, binarySearch(testArray2, 2), .001);
+    }
+
+    @Test
+    public void findFirstValueEvenSizedArray() {
+        assertEquals(0, binarySearch(testArray, 2), .001);
+    }
+
+    @Test
     public void cannotFindValue() {
+
         assertEquals(-1, binarySearch(testArray, 99), .001);
     }
 

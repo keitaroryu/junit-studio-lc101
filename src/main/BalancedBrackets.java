@@ -28,6 +28,9 @@ public class BalancedBrackets {
                 brackets++;
             } else if (ch == ']') {
                 brackets--;
+                if(brackets<0){         //if first bracket is ] indicated by a negative integer,
+                    brackets = -100;    //set brackets evaluation to be always false
+                }
             }
         }
         return brackets == 0;
